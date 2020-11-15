@@ -1,4 +1,8 @@
-# kag
-Koa.js Application Generator.
+# Create Koa Application CLI
+Koa.js Application Generator. 
 
-# How to run
+## Install
+`$ npm i -g npm i -g @bluedigitize/create-koa-app-cli`
+
+## How to run
+`$ create-koa-app-cli`
