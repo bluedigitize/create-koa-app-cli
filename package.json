@@ -1,10 +1,14 @@
 {
-  "name": "kag",
-  "version": "1.0.0",
+  "name": "@bluedigitize/create-koa-app-cli",
+  "version": "1.0.6",
   "description": "Generate a Koa.js API Application",
   "main": "bin/cli.js",
   "bin": {
-    "kag": "./bin/cli.js"
+    "create-koa-app-cli": "bin/cli.js"
+  },
+  "repository": {
+    "url": "git+https://github.com/bluedigitize/create-koa-app-cli.git",
+    "type": "git"
   },
   "author": "@bluedigitize",
   "license": "ISC",
@@ -13,5 +17,20 @@
     "ncp": "^2.0.0",
     "replace-in-file": "^6.1.0",
     "yargs": "^15.4.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/bluedigitize/create-koa-app-cli/issues"
+  },
+  "homepage": "https://github.com/bluedigitize/create-koa-app-cli#readme",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "koa",
+    "api",
+    "generator",
+    "create-app",
+    "create-koa-app"
+  ]
 }
