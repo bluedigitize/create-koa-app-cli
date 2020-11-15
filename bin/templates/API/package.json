@@ -1,0 +1,22 @@
+{
+  "name": "Service_Name",
+  "version": "1.0.0",
+  "engines": {
+    "node": "Node_Version"
+  },
+  "main": "src/server.js",
+  "author": "Service_Author",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon --watch './src/**/*' --watch '../../packages/**/*' src/server.js"
+  },
+  "dependencies": {
+    "koa": "2.13.0",
+    "koa-bodyparser": "4.3.0",
+    "koa-router": "10.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.6"
+  }
+}

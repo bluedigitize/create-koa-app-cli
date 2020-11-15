@@ -1,0 +1,17 @@
+{
+  "name": "kag",
+  "version": "1.0.0",
+  "description": "Generate a Koa.js API Application",
+  "main": "bin/cli.js",
+  "bin": {
+    "kag": "./bin/cli.js"
+  },
+  "author": "@bluedigitize",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^7.3.3",
+    "ncp": "^2.0.0",
+    "replace-in-file": "^6.1.0",
+    "yargs": "^15.4.1"
+  }
+}
