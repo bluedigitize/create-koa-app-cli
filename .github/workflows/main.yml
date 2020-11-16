@@ -25,8 +25,7 @@ jobs:
         with:
           node-version: ${{ env.node_version }}
           registry-url: 'https://registry.npmjs.org'
-      - run: npm i
-      - run: npm test
+      - run: yarn install
       - name: Version and publush to npm
         uses: bcomnes/npm-bump@v1.0.4
         with:
