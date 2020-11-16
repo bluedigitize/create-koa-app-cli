@@ -18,7 +18,7 @@ jobs:
           node-version: 14.0.0
       - name: Publish if version has been updated
         run: |
-          yarn
-          npm publish
+          npm ci
+          npm publish --access public
           touch .npmrc
           echo "registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > .npmrc
