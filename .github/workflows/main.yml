@@ -1,0 +1,38 @@
+name: Version and Release
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+    inputs:
+      newversion:
+        description: 'Semantic Version Bump Type (major minor patch)'
+        required: true
+
+env:
+  node_version: 14
+
+jobs:
+  version_and_release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.3.2
+        with:
+          fetch-depth: 0
+      - name: Use Node.js ${{ env.node_version }}
+        uses: actions/setup-node@v2.1.1
+        with:
+          node-version: ${{ env.node_version }}
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm i
+      - run: npm test
+      - name: Version and publush to npm
+        uses: bcomnes/npm-bump@v1.0.4
+        with:
+          git_email: ${{ github.email }}
+          git_username: ${{ github.actor }}
+          newversion: ${{ github.event.inputs.newversion }}
+          push_version_commit: false
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          npm_token: ${{ secrets.NPM_TOKEN }}
