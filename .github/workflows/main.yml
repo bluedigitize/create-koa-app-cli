@@ -2,7 +2,7 @@ name: npm-publish
 on:
   push:
     paths:
-      - 'packages.json'
+      - 'package.json'
     branches:
       - master
 jobs:
