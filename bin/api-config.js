@@ -12,7 +12,7 @@ const apiQuestions = [
     type: 'input',
     name: 'serviceName',
     message: 'Name of service?',
-    default: 'projection-name-api',
+    default: 'project-name-api',
     validate: (value) => {
       const valid = value !== null;
       return valid || 'Please enter a service name';
